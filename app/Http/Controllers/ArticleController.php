@@ -98,6 +98,7 @@ class ArticleController extends Controller
             'title' => 'required',
             'content' => 'required',
         ]);
+
         $this->articleService->updateArticle($id, $request->all());
         return response()->json(['status' => 'success']);
     }
